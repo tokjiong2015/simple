@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	<display-name>My Practice Project</display-name>
+	
+	<!-- Welcome Part -->
+	<welcome-file-list>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- Listener Part -->
+    <listener>
+		<listener-class>com.huiwen.zhongnn.listener.HuiwenContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.huiwen.zhongnn.listener.HuiwenContextAttributeListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.huiwen.zhongnn.listener.HuiwenServletRequestListener</listener-class>
+	</listener>
+	
+	<!-- Filter Part -->
+	<filter>
+		<description>This is login filter desc</description>
+		<display-name>This is display name</display-name>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>com.huiwen.zhongnn.filter.LoginFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/logincl</url-pattern>
+	</filter-mapping>
+	<!-- Servlet Part -->
+  <servlet>
+  	<description>Hi Du Hong Coding Here</description>
+  	<display-name>Hi Display Name</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.Login</servlet-class>
+    <init-param>
+    	<description>try to describe</description>
+    	<param-name>hiname</param-name>
+    	<param-value>hivalue</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginCL</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.LoginCL</servlet-class>
+    <init-param>
+    	<description>try to describe</description>
+    	<param-name>hiname</param-name>
+    	<param-value>hivalue</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>Welcom</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.Welcom</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Main</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.Main</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteUser</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.DeleteUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OK</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.OK</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Error</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.Error</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateUser</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.UpdateUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateCL</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.UpdateCL</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Leave</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.Leave</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddUser</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.AddUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddUserCL</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.AddUserCL</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchUser</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.SearchUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchUserCL</servlet-name>
+    <servlet-class>com.huiwen.zhongnn.servlet.SearchUserCL</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginCL</servlet-name>
+    <url-pattern>/logincl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Welcom</servlet-name>
+    <url-pattern>/welcom</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Main</servlet-name>
+    <url-pattern>/main</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteUser</servlet-name>
+    <url-pattern>/deleteuser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OK</servlet-name>
+    <url-pattern>/ok</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Error</servlet-name>
+    <url-pattern>/error</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUser</servlet-name>
+    <url-pattern>/updateuser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCL</servlet-name>
+    <url-pattern>/updatecl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Leave</servlet-name>
+    <url-pattern>/leave</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddUser</servlet-name>
+    <url-pattern>/adduser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddUserCL</servlet-name>
+    <url-pattern>/addusercl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchUser</servlet-name>
+    <url-pattern>/searchuser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchUserCL</servlet-name>
+    <url-pattern>/searchusercl</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
